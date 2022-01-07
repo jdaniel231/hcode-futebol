@@ -6,10 +6,19 @@
         <a href="" class="link navbar-brand mr-auto">
           <img src="./../assets/logo.svg" alt="Hcode Treinamento" class="img d-inline-block align-top" id="logo" > Futebol Clube
         </a>
-        <div class="link mr-2">
+        <div class="links mr-2">
           <a href="" class="btn mr-5">Inicio</a>
           <a href="" class="btn mr-5">Times</a>
           <a href="" class="btn mr-5">Classificação</a>
+
+          <select name="championship" id="select-championship" class="form-control" @change="$emit('select-championship', $event.target.value )" >
+            <option value="">Selecione um Campeonato</option>
+            <option value="Campeonato Brasileiro">Campeonato Brasileiro</option>
+            <option value="Campeonato Espanhol">Campeonato Espanhol</option>
+            <option value="Campeonato Italiano">Campeonato Italiano</option>
+            <option value="Campeonato Ingles">Campeonato Ingles</option>
+          </select>
+
         </div>
       </nav>
     </div>
@@ -37,17 +46,17 @@
     display: inline-flex;
   }
 
-  .link {
+  .links {
     color: #d48e23;
     font-size: 30px;
     font-family: 'Rajdhani';
   }
 
-  .link a{
+  .links a{
     color: #fff
   }
 
-  .link a:focus{
+  .links a:focus{
     outline: none !important;
     box-shadow: none !important;
   }
