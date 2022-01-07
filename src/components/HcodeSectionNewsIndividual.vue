@@ -5,10 +5,13 @@
       <img :src="require('../assets/' + this.imgName)" :alt="imgInfo">
     </div>
     <div class="col-9">
-      <h2>{{newsTitle}}</h2>
-      <p> {{newsContent | truncate(200)}} </p>
+     
+      <slot name="title"></slot>
 
-         <span class="font-italic" > {{newsDate}} </span>
+      <slot> Noticia Padrao </slot>
+     
+
+      <span class="font-italic" > {{newsDate}} </span>
     </div>
   </div>
   
@@ -22,14 +25,6 @@ export default {
       required: true,
     },
     imgInfo: {
-      type: String,
-      required: true,
-    },
-    newsTitle: {
-      type: String,
-      required: true,
-    },
-    newsContent: {
       type: String,
       required: true,
     },
