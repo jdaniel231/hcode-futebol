@@ -11,13 +11,15 @@
       <slot> Noticia Padrao </slot>
      
 
-      <span class="font-italic" > {{newsDate}} </span>
+      <span class="font-italic" > {{ formatDate(newsDate)}} </span>
     </div>
   </div>
   
 </template>
 
 <script>
+import Utils from './../mixins/UtilsMixin'
+
 export default {
   props: {
     imgName: {
@@ -32,7 +34,9 @@ export default {
       type: String,
       required: true,
     }
-  }
+  },
+
+  mixins: [Utils]
   
 }
 </script>
