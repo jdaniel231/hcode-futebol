@@ -27,13 +27,12 @@
 
 <script>
 import HcodeSectionBanner from './HcodeSectionBanner.vue'
-import HcodeSectionNew from './HcodeSectionNew.vue'
 import HcodeInput from './HcodeInput.vue'
 
 export default {
   components: {
     HcodeSectionBanner,
-    HcodeSectionNew, 
+    HcodeSectionNew: () => import('./HcodeSectionNew.vue'),
     HcodeInput
   },
   data() {
