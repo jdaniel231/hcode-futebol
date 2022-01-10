@@ -7,8 +7,8 @@
           <img src="./../assets/logo.svg" alt="Hcode Treinamento" class="img d-inline-block align-top" id="logo" > Futebol Clube
         </a>
         <div class="links mr-2">
-          <a href="" class="btn mr-5">Inicio</a>
-          <a href="" class="btn mr-5">Times</a>
+          <a href="" @click.prevent="$emit('change-component', 'home')" class="btn mr-5">Inicio</a>
+          <a href="" @click.prevent="$emit('change-component', 'news')" class="btn mr-5">Noticias</a>
           <a href="" class="btn mr-5">Classificação</a>
 
           <select name="championship" id="select-championship" class="form-control" @change="$emit('select-championship', $event.target.value )" >
@@ -46,7 +46,7 @@
     display: inline-flex;
   }
 
-  .links {
+  .link {
     color: #d48e23;
     font-size: 30px;
     font-family: 'Rajdhani';
