@@ -45,10 +45,16 @@ export default new Vuex.Store({
     setChampionship(state, newValue){
       state.championship = newValue;
     },
+    setClubeName(state, newName){
+      state.clubeName = newName;
+    }
   },
   actions: {
     changeChampionship(content, value){
       content.commit('setChampionship', value);
+    },
+    updateClubeName(content, value) {
+      content.commit('setClubeName', value );
     }
   }
 })

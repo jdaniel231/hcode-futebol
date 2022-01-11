@@ -5,7 +5,7 @@
     @change-component="changeComponent"
     />
     <HcodeSection 
-      :championship="championship" 
+      
       :current-component="currentSectionComponent"
     />
     <HcodeFooter />
