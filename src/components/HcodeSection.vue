@@ -28,6 +28,7 @@
 <script>
 import HcodeSectionBanner from './HcodeSectionBanner.vue'
 import HcodeInput from './HcodeInput.vue'
+import { mapState } from 'vuex'
 
 export default {
   components: {
@@ -37,13 +38,16 @@ export default {
   },
   data() {
     return{
-      myClube: 'Hcode Treinamento',
+     
     }
   },
   props: {
-    championship: String,
     currentComponent: String,
-  }
+  }, 
+  computed: {
+    ...mapState(['championship']),
+    ...mapState({ myClube: 'clubeName'})
+    }
 }
 
 </script>

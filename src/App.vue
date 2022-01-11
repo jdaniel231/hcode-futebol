@@ -26,8 +26,7 @@ export default {
     HcodeSection
   },
   data() {
-    return {
-      championship: 'Campeonato Brasileiro',
+    return {      
       currentSectionComponent: 'HcodeSectionBanner'
     }
   },
