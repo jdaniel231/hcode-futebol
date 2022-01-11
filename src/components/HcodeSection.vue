@@ -6,8 +6,7 @@
         </div>
       </div>
 
-    <component :is="currentComponent"> </component>
-    
+      <router-view></router-view>
     
    
 
@@ -26,14 +25,11 @@
 </template>
 
 <script>
-import HcodeSectionBanner from './HcodeSectionBanner.vue'
 import HcodeInput from './HcodeInput.vue'
 import { mapGetters } from 'vuex'
 
 export default {
   components: {
-    HcodeSectionBanner,
-    HcodeSectionNew: () => import('./HcodeSectionNew.vue'),
     HcodeInput
   },
   data() {
