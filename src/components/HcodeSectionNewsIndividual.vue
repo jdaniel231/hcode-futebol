@@ -41,7 +41,7 @@ export default {
 }
 </script>
 
-<style>
+<style >
 .div-news {
     margin-bottom: 30px;
 }
