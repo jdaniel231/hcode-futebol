@@ -16,6 +16,7 @@
 import HcodeHeader from './components/HcodeHeader.vue'
 import HcodeFooter from './components/HcodeFooter.vue'
 import HcodeSection from './components/HcodeSection.vue'
+import { mapMutations } from 'vuex'
 
 
 export default {
@@ -31,9 +32,9 @@ export default {
     }
   },
   methods: {
-    changeChampionship(value) {
-      this.championship = value;
-    },
+    ...mapMutations({
+      changeChampionship: 'setChampionship'
+    }),
     changeComponent(value) {
       let component;
       switch (value) {
