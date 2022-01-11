@@ -45,5 +45,10 @@ export default new Vuex.Store({
     setChampionship(state, newValue){
       state.championship = newValue;
     },
+  },
+  actions: {
+    changeChampionship(content, value){
+      content.commit('setChampionship', value);
+    }
   }
 })
