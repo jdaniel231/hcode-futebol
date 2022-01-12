@@ -10,6 +10,18 @@ Vue.use(Vue2Filters)
 
 Vue.config.productionTip = false
 
+// Global Guards
+
+// router.beforeEach((to, from, next) => {
+//   console.log(to, from);
+
+//   next();
+// })
+
+// router.afterEach(() =>{
+//   console.log('Ok')
+// })
+
 new Vue({
   render: h => h(App),
   store,

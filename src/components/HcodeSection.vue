@@ -6,7 +6,9 @@
         </div>
       </div>
 
-      <router-view></router-view>
+      <transition name="fade-view" >
+        <router-view></router-view>
+      </transition>
     
    
 
@@ -51,5 +53,11 @@ export default {
 </script>
 
 <style scoped>
+  .fade-view-enter, .fade-view-leave-to {
+    opacity:0 ;
+  }
 
+  .fade-view-enter-active, .fade-view-leave-active {
+    transition: opacity .5s ease-in-out;
+  }
 </style>

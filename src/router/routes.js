@@ -20,7 +20,10 @@ export default new VueRouter({
   }, {
     path: '/news/:idnotice',
     name: 'notice',
-    component: Notice
+    component: Notice,
+    beforeEnter: (to, from, next) => {
+      next ();
+    }
   }, {
     path: '/admin',
     redirect: '/'
