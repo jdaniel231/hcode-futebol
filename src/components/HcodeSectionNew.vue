@@ -9,7 +9,9 @@
         :news-date="notice.date"
       >
           <template  #title>
-             <h2 @click="goToPage(`/news/${notice.id}`)">{{notice.title}}</h2>
+              <router-link :to="{name: 'notice', params: {idnotice: notice.id}}" tag="h2" > {{notice.title}} </router-link>
+
+             <!-- <h2 @click="goToPage(`/news/${notice.id}`)">{{notice.title}}</h2> -->
           </template>
          <p> {{notice.content | truncate(200)}} </p>
       </HcodeSectionNewsIndividual>
@@ -38,9 +40,9 @@ export default {
     },
 
   methods: {
-    goToPage(page){
-      this.$router.push(page);
-    }
+    // goToPage(page){
+    //   this.$router.push(page);
+    // }
   }
 
  
